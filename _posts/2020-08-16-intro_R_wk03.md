@@ -6,6 +6,30 @@ author:
  - name: Colleen O'Briant
    affiliation: University of Oregon
 date: "`r format(Sys.time(), '%B %d %Y')`"
+------
+title: "Week 3"
+subtitle: "Data Visualization with ggplot2"
+output: html_document
+author: 
+ - name: Colleen O'Briant
+   affiliation: University of Oregon
+date: "`r format(Sys.time(), '%B %d %Y')`"
+------
+title: "Week 3"
+subtitle: "Data Visualization with ggplot2"
+output: html_document
+author: 
+ - name: Colleen O'Briant
+   affiliation: University of Oregon
+date: "`r format(Sys.time(), '%B %d %Y')`"
+------
+title: "Week 3"
+subtitle: "Data Visualization with ggplot2"
+output: html_document
+author: 
+ - name: Colleen O'Briant
+   affiliation: University of Oregon
+date: "`r format(Sys.time(), '%B %d %Y')`"
 ---<style>
   .col2 {
     columns: 2 200px;         /* number of columns and width in pixels*/
@@ -43,7 +67,7 @@ Take some data and build a scatterplot.
     ggplot(data = gapminder) +
       geom_point(mapping = aes(x = gdpPercap, y = lifeExp))
 
-![]({{site_url}}/img/blog_images/introRweek03_files/figure-markdown_strict/unnamed-chunk-2-1.png)
+![]({{site_url}}/img/blog_images/{{site_url}}/img/blog_images/{{site_url}}/img/blog_images/{{site_url}}/img/blog_images/introRweek03_files/figure-markdown_strict/unnamed-chunk-2-1.png)
 
 <br>
 
@@ -87,7 +111,7 @@ Then we’ll add `+` `geom_point()` to draw a scatterplot:
     ggplot(gapminder) +
       geom_boxplot(aes(x = as.factor(year), y = lifeExp))
 
-![]({{site_url}}/img/blog_images/introRweek03_files/figure-markdown_strict/unnamed-chunk-5-1.png)
+![]({{site_url}}/img/blog_images/{{site_url}}/img/blog_images/{{site_url}}/img/blog_images/{{site_url}}/img/blog_images/introRweek03_files/figure-markdown_strict/unnamed-chunk-5-1.png)
 
 <br><br><br><br>
 
@@ -105,7 +129,7 @@ Next we’ll add a title and adjust the labels on the x- and y-axis.
         ) +
       theme(text = element_text(size = 10))
 
-![]({{site_url}}/img/blog_images/introRweek03_files/figure-markdown_strict/unnamed-chunk-6-1.png)
+![]({{site_url}}/img/blog_images/{{site_url}}/img/blog_images/{{site_url}}/img/blog_images/{{site_url}}/img/blog_images/introRweek03_files/figure-markdown_strict/unnamed-chunk-6-1.png)
 
 Check out `?labs`:
 
@@ -138,7 +162,7 @@ See the next section for more info on `theme()`!
       geom_boxplot(aes(x = as.factor(year), y = lifeExp)) +
       labs(title = "Global life expectancy is leveling off", caption = "data: gapminder", tag = "Week 3")
 
-![]({{site_url}}/img/blog_images/introRweek03_files/figure-markdown_strict/unnamed-chunk-7-1.png)
+![]({{site_url}}/img/blog_images/{{site_url}}/img/blog_images/{{site_url}}/img/blog_images/{{site_url}}/img/blog_images/introRweek03_files/figure-markdown_strict/unnamed-chunk-7-1.png)
 
 <br><br><br><br>
 
@@ -156,7 +180,7 @@ More `theme()`
         panel.background = element_rect(fill = "green")
         )
 
-![]({{site_url}}/img/blog_images/introRweek03_files/figure-markdown_strict/unnamed-chunk-8-1.png)
+![]({{site_url}}/img/blog_images/{{site_url}}/img/blog_images/{{site_url}}/img/blog_images/{{site_url}}/img/blog_images/introRweek03_files/figure-markdown_strict/unnamed-chunk-8-1.png)
 
 What else can we do with `theme()`? Check out `?theme`
 
@@ -189,7 +213,7 @@ Presets: `theme_*`
       labs(x = "GDP/capita", y = "life expectancy") +
       theme_bw() # 👈 😀 👈 
 
-![]({{site_url}}/img/blog_images/introRweek03_files/figure-markdown_strict/unnamed-chunk-9-1.png)
+![]({{site_url}}/img/blog_images/{{site_url}}/img/blog_images/{{site_url}}/img/blog_images/{{site_url}}/img/blog_images/introRweek03_files/figure-markdown_strict/unnamed-chunk-9-1.png)
 
     # `theme_minimal()`
     ggplot(gapminder) +
@@ -197,7 +221,7 @@ Presets: `theme_*`
       labs(x = "GDP/capita", y = "life expectancy") +
       theme_minimal() # 👈 🙂 👈 
 
-![]({{site_url}}/img/blog_images/introRweek03_files/figure-markdown_strict/unnamed-chunk-10-1.png)
+![]({{site_url}}/img/blog_images/{{site_url}}/img/blog_images/{{site_url}}/img/blog_images/{{site_url}}/img/blog_images/introRweek03_files/figure-markdown_strict/unnamed-chunk-10-1.png)
 
     # `theme_void()`
     ggplot(gapminder) +
@@ -205,7 +229,7 @@ Presets: `theme_*`
       labs(x = "GDP/capita", y = "life expectancy") +
       theme_void() # 👈 😶 👈 
 
-![]({{site_url}}/img/blog_images/introRweek03_files/figure-markdown_strict/unnamed-chunk-11-1.png)
+![]({{site_url}}/img/blog_images/{{site_url}}/img/blog_images/{{site_url}}/img/blog_images/{{site_url}}/img/blog_images/introRweek03_files/figure-markdown_strict/unnamed-chunk-11-1.png)
 
 <br><br><br><br><br>
 
@@ -218,7 +242,7 @@ Fit a line: `+ geom_smooth()`
       theme_minimal() +
       geom_smooth(aes(x = gdpPercap, y = lifeExp)) # 👈 😑 👈 
 
-![]({{site_url}}/img/blog_images/introRweek03_files/figure-markdown_strict/unnamed-chunk-12-1.png)
+![]({{site_url}}/img/blog_images/{{site_url}}/img/blog_images/{{site_url}}/img/blog_images/{{site_url}}/img/blog_images/introRweek03_files/figure-markdown_strict/unnamed-chunk-12-1.png)
 
 `geom_smooth()` does smoothed conditional means. Here, it adds another
 layer of graphics on top of the scatterplot.
@@ -251,7 +275,7 @@ lead to almost the same result.
       theme_minimal() +
       geom_smooth(method = lm)
 
-![]({{site_url}}/img/blog_images/introRweek03_files/figure-markdown_strict/unnamed-chunk-14-1.png)
+![]({{site_url}}/img/blog_images/{{site_url}}/img/blog_images/{{site_url}}/img/blog_images/{{site_url}}/img/blog_images/introRweek03_files/figure-markdown_strict/unnamed-chunk-14-1.png)
 
 <br>
 
@@ -263,7 +287,7 @@ lead to almost the same result.
       geom_smooth(method = lm) +
       scale_x_log10(labels = scales::comma) # 👈 😀 👈 use labels = scales::comma to suppress scientific notation here
 
-![]({{site_url}}/img/blog_images/introRweek03_files/figure-markdown_strict/unnamed-chunk-15-1.png)
+![]({{site_url}}/img/blog_images/{{site_url}}/img/blog_images/{{site_url}}/img/blog_images/{{site_url}}/img/blog_images/introRweek03_files/figure-markdown_strict/unnamed-chunk-15-1.png)
 
 > Note the difference in the breaks on the x-axis. log10(1000) = 3, but
 > log GDP/cap = 3 is harder to decipher than GDP/cap = 1,000.
@@ -285,7 +309,7 @@ to `y`, we can map `continent` to `color`.
       geom_smooth(method = lm) + 
       scale_x_log10(labels = scales::comma)
 
-![]({{site_url}}/img/blog_images/introRweek03_files/figure-markdown_strict/unnamed-chunk-16-1.png)
+![]({{site_url}}/img/blog_images/{{site_url}}/img/blog_images/{{site_url}}/img/blog_images/{{site_url}}/img/blog_images/introRweek03_files/figure-markdown_strict/unnamed-chunk-16-1.png)
 
 ### Exercise 3
 
@@ -302,7 +326,7 @@ to `y`, we can map `continent` to `color`.
       geom_smooth(method = lm) + 
       scale_x_log10(labels = scales::comma)
 
-![]({{site_url}}/img/blog_images/introRweek03_files/figure-markdown_strict/unnamed-chunk-17-1.png)
+![]({{site_url}}/img/blog_images/{{site_url}}/img/blog_images/{{site_url}}/img/blog_images/{{site_url}}/img/blog_images/introRweek03_files/figure-markdown_strict/unnamed-chunk-17-1.png)
 
 <br><br>
 
@@ -324,7 +348,7 @@ in the plot. You’ll implement this by writing `color = "pink"` in the
       geom_smooth(method = lm, color = "gray") + 
       scale_x_log10(labels = scales::comma)
 
-![]({{site_url}}/img/blog_images/introRweek03_files/figure-markdown_strict/unnamed-chunk-18-1.png)
+![]({{site_url}}/img/blog_images/{{site_url}}/img/blog_images/{{site_url}}/img/blog_images/{{site_url}}/img/blog_images/introRweek03_files/figure-markdown_strict/unnamed-chunk-18-1.png)
 
 <br><br><br><br>
 
@@ -342,7 +366,7 @@ color scale. That’s another `scale` I can adjust.
       scale_x_log10(labels = scales::comma) +
       scale_color_manual(values = c("#e3a446", "#6187cf", "#699e4a", "#db502a", "#3b3078")) # 👈 🤓 👈
 
-![]({{site_url}}/img/blog_images/introRweek03_files/figure-markdown_strict/unnamed-chunk-19-1.png)
+![]({{site_url}}/img/blog_images/{{site_url}}/img/blog_images/{{site_url}}/img/blog_images/{{site_url}}/img/blog_images/introRweek03_files/figure-markdown_strict/unnamed-chunk-19-1.png)
 
 `continent` is a `factor` variable with 5 `levels`, so I’ll need to pick
 out 5 colors.
@@ -381,7 +405,7 @@ get hex codes like “\#553469”.
       scale_fill_manual(values = c("#e3a446", "#6187cf", "#699e4a", "#db502a", "#3b3078")) +  # 👈 🤓 👈
       scale_shape_manual(values = c(21, 22, 23, 24, 25)) # 👈 🤓 👈
 
-![]({{site_url}}/img/blog_images/introRweek03_files/figure-markdown_strict/unnamed-chunk-21-1.png)
+![]({{site_url}}/img/blog_images/{{site_url}}/img/blog_images/{{site_url}}/img/blog_images/{{site_url}}/img/blog_images/introRweek03_files/figure-markdown_strict/unnamed-chunk-21-1.png)
 
 <br><br><br><br>
 
@@ -403,7 +427,7 @@ the closer it is to 0, the more transparent the points are.
       scale_x_log10(labels = scales::comma) +
       scale_color_manual(values = c("#e3a446", "#6187cf", "#83b543", "#db502a", "#3b3078"))
 
-![]({{site_url}}/img/blog_images/introRweek03_files/figure-markdown_strict/unnamed-chunk-22-1.png)
+![]({{site_url}}/img/blog_images/{{site_url}}/img/blog_images/{{site_url}}/img/blog_images/{{site_url}}/img/blog_images/introRweek03_files/figure-markdown_strict/unnamed-chunk-22-1.png)
 
 Point `size`
 ------------
@@ -421,7 +445,7 @@ the `aes()` call.
       scale_x_log10(labels = scales::comma) +
       scale_color_manual(values = c("#e3a446", "#6187cf", "#83b543", "#db502a", "#3b3078"))
 
-![]({{site_url}}/img/blog_images/introRweek03_files/figure-markdown_strict/unnamed-chunk-23-1.png)
+![]({{site_url}}/img/blog_images/{{site_url}}/img/blog_images/{{site_url}}/img/blog_images/{{site_url}}/img/blog_images/introRweek03_files/figure-markdown_strict/unnamed-chunk-23-1.png)
 
     # tiny: size = .5
     ggplot(gapminder, aes(x = gdpPercap, y = lifeExp)) +
@@ -432,7 +456,7 @@ the `aes()` call.
       scale_x_log10(labels = scales::comma) +
       scale_color_manual(values = c("#e3a446", "#6187cf", "#83b543", "#db502a", "#3b3078"))
 
-![]({{site_url}}/img/blog_images/introRweek03_files/figure-markdown_strict/unnamed-chunk-24-1.png)
+![]({{site_url}}/img/blog_images/{{site_url}}/img/blog_images/{{site_url}}/img/blog_images/{{site_url}}/img/blog_images/introRweek03_files/figure-markdown_strict/unnamed-chunk-24-1.png)
 
 <br><br>
 
@@ -452,7 +476,7 @@ the `aes()` call!
       scale_x_log10(labels = scales::comma) +
       scale_color_manual(values = c("#e3a446", "#6187cf", "#83b543", "#db502a", "#3b3078"))
 
-![]({{site_url}}/img/blog_images/introRweek03_files/figure-markdown_strict/unnamed-chunk-25-1.png)
+![]({{site_url}}/img/blog_images/{{site_url}}/img/blog_images/{{site_url}}/img/blog_images/{{site_url}}/img/blog_images/introRweek03_files/figure-markdown_strict/unnamed-chunk-25-1.png)
 
 Faceting: `facet_wrap()`
 ------------------------
@@ -471,7 +495,7 @@ dataset. There’s a way to quickly do that, and it’s called faceting.
       scale_color_manual(values = c("#e3a446", "#6187cf", "#83b543", "#db502a", "#3b3078")) +
       facet_wrap(facets = vars(year)) # 👈 😲 👈
 
-![]({{site_url}}/img/blog_images/introRweek03_files/figure-markdown_strict/unnamed-chunk-26-1.png)
+![]({{site_url}}/img/blog_images/{{site_url}}/img/blog_images/{{site_url}}/img/blog_images/{{site_url}}/img/blog_images/introRweek03_files/figure-markdown_strict/unnamed-chunk-26-1.png)
 
 ### Exercise 5
 
@@ -491,7 +515,7 @@ dataset. There’s a way to quickly do that, and it’s called faceting.
       scale_x_log10(labels = scales::comma) +
       facet_wrap(facets = vars(continent)) # 👈 😲 👈
 
-![]({{site_url}}/img/blog_images/introRweek03_files/figure-markdown_strict/unnamed-chunk-27-1.png)
+![]({{site_url}}/img/blog_images/{{site_url}}/img/blog_images/{{site_url}}/img/blog_images/{{site_url}}/img/blog_images/introRweek03_files/figure-markdown_strict/unnamed-chunk-27-1.png)
 
 <br><br>
 
@@ -515,7 +539,7 @@ also decided to replace `geom_point()` with `geom_text()`.
       transition_time(year) + # 👈 🤯 👈
       labs(title = "Year: {frame_time}")
 
-![]({{site_url}}/img/blog_images/introRweek03_files/figure-markdown_strict/unnamed-chunk-28-1.gif)
+![]({{site_url}}/img/blog_images/{{site_url}}/img/blog_images/{{site_url}}/img/blog_images/{{site_url}}/img/blog_images/introRweek03_files/figure-markdown_strict/unnamed-chunk-28-1.gif)
 
 Review
 ------
@@ -578,7 +602,7 @@ Use this as a guide:
       labs(color = "country") +
       geom_line()
 
-![]({{site_url}}/img/blog_images/introRweek03_files/figure-markdown_strict/unnamed-chunk-30-1.png)
+![]({{site_url}}/img/blog_images/{{site_url}}/img/blog_images/{{site_url}}/img/blog_images/{{site_url}}/img/blog_images/introRweek03_files/figure-markdown_strict/unnamed-chunk-30-1.png)
 
 #### 3.2 `geom_bar()` and `geom_histogram()`
 
@@ -619,7 +643,7 @@ Use these as guides:
       ggplot() +
       geom_bar(aes(x = fct_infreq(continent), fill = continent))
 
-![]({{site_url}}/img/blog_images/introRweek03_files/figure-markdown_strict/unnamed-chunk-32-1.png)
+![]({{site_url}}/img/blog_images/{{site_url}}/img/blog_images/{{site_url}}/img/blog_images/{{site_url}}/img/blog_images/introRweek03_files/figure-markdown_strict/unnamed-chunk-32-1.png)
 
     ## Histogram
     ### rescale the x-axis when working with the `gdpPercap` variable
@@ -630,7 +654,7 @@ Use these as guides:
       geom_histogram(aes(x = gdpPercap, fill = continent), bins = 10) +
       scale_x_log10()
 
-![]({{site_url}}/img/blog_images/introRweek03_files/figure-markdown_strict/unnamed-chunk-32-2.png)
+![]({{site_url}}/img/blog_images/{{site_url}}/img/blog_images/{{site_url}}/img/blog_images/{{site_url}}/img/blog_images/introRweek03_files/figure-markdown_strict/unnamed-chunk-32-2.png)
 
     ## `geom_density()` does something similar with the argument `y = ..count..`
     gapminder %>%
@@ -639,7 +663,7 @@ Use these as guides:
       geom_density(aes(x = gdpPercap, fill = continent, y = ..count..), alpha = .3) +
       scale_x_log10()
 
-![]({{site_url}}/img/blog_images/introRweek03_files/figure-markdown_strict/unnamed-chunk-32-3.png)
+![]({{site_url}}/img/blog_images/{{site_url}}/img/blog_images/{{site_url}}/img/blog_images/{{site_url}}/img/blog_images/introRweek03_files/figure-markdown_strict/unnamed-chunk-32-3.png)
 
 #### 3.3 `geom_abline()`, `geom_vline()`, and `geom_hline()`
 
@@ -670,4 +694,4 @@ Use this as a guide:
       geom_vline(xintercept = 693.5) +
       annotate("text", x = 693.5 - 170, y = 12.5, label = "International Poverty Line", angle = 90)
 
-![]({{site_url}}/img/blog_images/introRweek03_files/figure-markdown_strict/unnamed-chunk-34-1.png)
+![]({{site_url}}/img/blog_images/{{site_url}}/img/blog_images/{{site_url}}/img/blog_images/{{site_url}}/img/blog_images/introRweek03_files/figure-markdown_strict/unnamed-chunk-34-1.png)
