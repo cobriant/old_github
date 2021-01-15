@@ -32,7 +32,7 @@ background-size: 800px
 
 # RMarkdown document for these slides
 
-Can be found [here](https://cobriant.github.io/custom_css/custom_css.html)
+Can be found [here](https://raw.githubusercontent.com/cobriant/cobriant.github.io/master/custom_css/custom_css.Rmd)
 
 ---
 
