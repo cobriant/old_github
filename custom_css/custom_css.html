@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Custom CSS for your RMarkdown Slides</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Colleen O’Briant" />
+    <meta name="date" content="2021-01-15" />
+    <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
+    <script src="libs/kePrint-0.0.1/kePrint.js"></script>
+    <link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+  </head>
+  <body>
+    <textarea id="source">
+
+
+
+
+background-image: url('figures/banner.jpg')
+background-size: 800px
+
+&lt;span class='darkblue large' style ="margin-left: 50px; margin-top: 500px; display: inline-block;"&gt;Custom CSS for your RMarkdown Slides&lt;/span&gt;
+
+---
+
+# These slides are created with:
+
+&lt;span style='position: absolute; left: 50px; bottom: 100px; font-size: 72px; font-family: Apple_Jam; color: #bf6297;'&gt;xaringan&lt;/span&gt;
+
+---
+
+# RMarkdown document for these slides
+
+Can be found [here](https://cobriant.github.io/custom_css/custom_css.html)
+
+---
+
+# Use a CSS code chunk at the bottom of your document
+
+This sets Apple_Jam as my default font and also makes my slides non-copy-paste-able.
+
+
+```css
+ body, h1 {
+  font-family: Apple_Jam;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+```
+
+---
+
+# Using a web font
+
+You can download a font from the web like [this](https://www.myfonts.com/fonts/cmeree/apple-jam/), save it into a folder like *figures*, and call it like this:
+
+
+```css
+@font-face{
+  font-family: Apple_Jam;
+  src: url("figures/Cmeree - Apple Jam Regular.otf")
+  format("opentype");
+}
+```
+ 
+---
+
+# Color Scheme
+
+Make sure it's colorblind-friendly!
+
+
+```css
+.purple {color: #1f1432;}
+.orange {color: #de9009;}
+.lightblue {color: #47a5e3;}
+.green {color: #11905f;}
+.yellow {color: #ede135;}
+.darkblue {color: #0c5ca2;}
+.pink {color: #bf6297;}
+```
+
+&lt;span class='purple'&gt;Dark Purple&lt;/span&gt;
+
+--
+&lt;span class='orange'&gt;Orange&lt;/span&gt;
+
+--
+&lt;span class='lightblue'&gt;Light Blue&lt;/span&gt;
+
+--
+&lt;span class='darkblue'&gt;Dark Blue&lt;/span&gt;
+
+--
+&lt;span class='yellow'&gt;Yellow&lt;/span&gt;
+
+--
+&lt;span class='green'&gt;Green&lt;/span&gt;
+
+--
+&lt;span class='pink'&gt;Pink&lt;/span&gt;
+
+---
+
+# Font size
+
+
+```css
+.tiny {font-size: 20px;}
+.small {font-size: 30px;}
+.medium {font-size: 40px;}
+.large {font-size: 45px;}
+.huge {font-size: 60px;}
+```
+
+&lt;span class='tiny'&gt;tiny&lt;/span&gt;
+
+--
+&lt;span class='small'&gt;small&lt;/span&gt;
+
+--
+&lt;span class='medium'&gt;medium&lt;/span&gt;
+
+--
+&lt;span class='large'&gt;large&lt;/span&gt;
+
+--
+&lt;span class='huge'&gt;huge&lt;/span&gt;
+
+---
+
+# Underlining
+
+
+```css
+.yellowunderline {
+  text-decoration: underline;
+  text-decoration-color: #ede135;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 1.5px;
+}
+```
+
+&lt;span class='huge orange yellowunderline'&gt;This has a yellow underline&lt;/span&gt;
+
+---
+
+# Footnotes
+
+
+```css
+.footnote {
+    position: absolute;
+    bottom: 3em;
+    padding-right: 4em;
+    font-size: 20px;
+    color: #807b6f;
+}
+```
+
+&lt;span class='footnote'&gt;this is a footnote&lt;/span&gt;
+
+---
+
+# Squeezing white space in bulleted lists
+
+
+```css
+li {
+  font-size: 35px;
+  line-height: 120%;
+}
+```
+
+* Item 1
+* Item 2
+* Item 3
+
+---
+
+# pull-left and pull-right
+
+--
+
+.pull-left[
+* blah
+* blah
+]
+
+--
+
+.pull-right[
+* blah
+* blah
+]
+
+---
+
+# Tables with kableExtra
+
+
+
+
+```r
+tibble(
+  n_sushi = 1:5,
+  marginal_benefit = c("$10", "$8", "$7", "$4", "$2"),
+  marginal_cost = c("$6", "$6", "$6", "$6", "$6")) %&gt;%
+  kbl() %&gt;%
+  kable_paper("hover", full_width = F)
+```
+
+&lt;table class=" lightable-paper lightable-hover" style='font-family: "Arial Narrow", arial, helvetica, sans-serif; width: auto !important; margin-left: auto; margin-right: auto;'&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:right;"&gt; n_sushi &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; marginal_benefit &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; marginal_cost &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; $10 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; $6 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt; 2 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; $8 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; $6 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt; 3 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; $7 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; $6 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt; 4 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; $4 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; $6 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt; 5 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; $2 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; $6 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+---
+
+# Resources
+
+[w3schools.com](https://www.w3schools.com/css/)
+
+&lt;style type="text/css"&gt;
+@font-face{
+  font-family: Apple_Jam;
+  src: url("figures/Cmeree - Apple Jam Regular.otf")
+  format("opentype");
+}
+
+body, h1 {
+  font-family: Apple_Jam;
+  -webkit-user-select: none;  /* Chrome all / Safari all */
+  -moz-user-select: none;     /* Firefox all */
+  -ms-user-select: none;      /* IE 10+ */
+  user-select: none;          /* Likely future */ 
+}
+
+.remark-slide-content {
+    background-color: #fff;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: table-cell;
+    font-size: 40px;
+    color: #1f1432;
+    padding: 1em 4em 1em 4em;
+}
+
+h1 {
+  color: #0c5ca2; 
+  font-size: 60px;
+}
+
+.purple {color: #1f1432;}
+.orange {color: #de9009;}
+.lightblue {color: #47a5e3;}
+.green {color: #11905f;}
+.yellow {color: #ede135;}
+.darkblue {color: #0c5ca2;}
+.pink {color: #bf6297;}
+    
+.tiny {font-size: 20px;}
+.small {font-size: 30px;}
+.medium {font-size: 40px;}
+.large {font-size: 45px;}
+.huge {font-size: 60px;}
+
+.yellowunderline {
+  text-decoration: underline;
+  text-decoration-color: #ede135;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 1.5px;
+}
+
+li {
+  font-size: 35px;
+  line-height: 120%;
+}
+
+.footnote {
+    position: absolute;
+    bottom: 3em;
+    padding-right: 4em;
+    font-size: 20px;
+    color: #807b6f;
+}
+
+table {
+   font-size: 15px;
+}
+&lt;/style&gt;
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false,
+"slideNumberFormat": "%current%"
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

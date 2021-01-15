@@ -1,0 +1,284 @@
+---
+title: "Custom CSS for your RMarkdown Slides"
+author: "Colleen O'Briant"
+date: "`r Sys.Date()`"
+output:
+  xaringan::moon_reader:
+    seal: false
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      slideNumberFormat: "%current%"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+background-image: url('figures/banner.jpg')
+background-size: 800px
+
+<span class='darkblue large' style ="margin-left: 50px; margin-top: 500px; display: inline-block;">Custom CSS for your RMarkdown Slides</span>
+
+---
+
+# These slides are created with:
+
+<span style='position: absolute; left: 50px; bottom: 100px; font-size: 72px; font-family: Apple_Jam; color: #bf6297;'>xaringan</span>
+
+---
+
+# RMarkdown document for these slides
+
+Can be found [here](https://cobriant.github.io/custom_css/custom_css.html)
+
+---
+
+# Use a CSS code chunk at the bottom of your document
+
+This sets Apple_Jam as my default font and also makes my slides non-copy-paste-able.
+
+```{css, echo = T, eval = F}
+ body, h1 {
+  font-family: Apple_Jam;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+```
+
+---
+
+# Using a web font
+
+You can download a font from the web like [this](https://www.myfonts.com/fonts/cmeree/apple-jam/), save it into a folder like *figures*, and call it like this:
+
+```{css, echo = T, eval = F}
+@font-face{
+  font-family: Apple_Jam;
+  src: url("figures/Cmeree - Apple Jam Regular.otf")
+  format("opentype");
+}
+```
+ 
+---
+
+# Color Scheme
+
+Make sure it's colorblind-friendly!
+
+```{css, echo = T, eval = F}
+.purple {color: #1f1432;}
+.orange {color: #de9009;}
+.lightblue {color: #47a5e3;}
+.green {color: #11905f;}
+.yellow {color: #ede135;}
+.darkblue {color: #0c5ca2;}
+.pink {color: #bf6297;}
+```
+
+<span class='purple'>Dark Purple</span>
+
+--
+<span class='orange'>Orange</span>
+
+--
+<span class='lightblue'>Light Blue</span>
+
+--
+<span class='darkblue'>Dark Blue</span>
+
+--
+<span class='yellow'>Yellow</span>
+
+--
+<span class='green'>Green</span>
+
+--
+<span class='pink'>Pink</span>
+
+---
+
+# Font size
+
+```{css, echo = T, eval = F}
+.tiny {font-size: 20px;}
+.small {font-size: 30px;}
+.medium {font-size: 40px;}
+.large {font-size: 45px;}
+.huge {font-size: 60px;}
+```
+
+<span class='tiny'>tiny</span>
+
+--
+<span class='small'>small</span>
+
+--
+<span class='medium'>medium</span>
+
+--
+<span class='large'>large</span>
+
+--
+<span class='huge'>huge</span>
+
+---
+
+# Underlining
+
+```{css, echo = T, eval = F}
+.yellowunderline {
+  text-decoration: underline;
+  text-decoration-color: #ede135;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 1.5px;
+}
+```
+
+<span class='huge orange yellowunderline'>This has a yellow underline</span>
+
+---
+
+# Footnotes
+
+```{css, echo = T, eval = F}
+.footnote {
+    position: absolute;
+    bottom: 3em;
+    padding-right: 4em;
+    font-size: 20px;
+    color: #807b6f;
+}
+```
+
+<span class='footnote'>this is a footnote</span>
+
+---
+
+# Squeezing white space in bulleted lists
+
+```{css, echo = T, eval = F}
+li {
+  font-size: 35px;
+  line-height: 120%;
+}
+```
+
+* Item 1
+* Item 2
+* Item 3
+
+---
+
+# pull-left and pull-right
+
+--
+
+.pull-left[
+* blah
+* blah
+]
+
+--
+
+.pull-right[
+* blah
+* blah
+]
+
+---
+
+# Tables with kableExtra
+
+```{r, echo = F, message = F}
+library(tidyverse)
+library(kableExtra)
+```
+
+```{r}
+tibble(
+  n_sushi = 1:5,
+  marginal_benefit = c("$10", "$8", "$7", "$4", "$2"),
+  marginal_cost = c("$6", "$6", "$6", "$6", "$6")) %>%
+  kbl() %>%
+  kable_paper("hover", full_width = F)
+```
+
+---
+
+# Resources
+
+[w3schools.com](https://www.w3schools.com/css/)
+
+```{css, echo=FALSE}
+@font-face{
+  font-family: Apple_Jam;
+  src: url("figures/Cmeree - Apple Jam Regular.otf")
+  format("opentype");
+}
+
+body, h1 {
+  font-family: Apple_Jam;
+  -webkit-user-select: none;  /* Chrome all / Safari all */
+  -moz-user-select: none;     /* Firefox all */
+  -ms-user-select: none;      /* IE 10+ */
+  user-select: none;          /* Likely future */ 
+}
+
+.remark-slide-content {
+    background-color: #fff;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: table-cell;
+    font-size: 40px;
+    color: #1f1432;
+    padding: 1em 4em 1em 4em;
+}
+
+h1 {
+  color: #0c5ca2; 
+  font-size: 60px;
+}
+
+.purple {color: #1f1432;}
+.orange {color: #de9009;}
+.lightblue {color: #47a5e3;}
+.green {color: #11905f;}
+.yellow {color: #ede135;}
+.darkblue {color: #0c5ca2;}
+.pink {color: #bf6297;}
+    
+.tiny {font-size: 20px;}
+.small {font-size: 30px;}
+.medium {font-size: 40px;}
+.large {font-size: 45px;}
+.huge {font-size: 60px;}
+
+.yellowunderline {
+  text-decoration: underline;
+  text-decoration-color: #ede135;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 1.5px;
+}
+
+li {
+  font-size: 35px;
+  line-height: 120%;
+}
+
+.footnote {
+    position: absolute;
+    bottom: 3em;
+    padding-right: 4em;
+    font-size: 20px;
+    color: #807b6f;
+}
+
+table {
+   font-size: 15px;
+}
+```
