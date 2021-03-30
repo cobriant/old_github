@@ -12,18 +12,28 @@ author:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-<style>
-  .col2 {
+```{css, echo=FALSE}
+body, h1, header1, header2, header3, p, li {
+  font-family: 'SF Mono Regular';
+  -webkit-user-select: none;  /* Chrome all / Safari all */
+  -moz-user-select: none;     /* Firefox all */
+  -ms-user-select: none;      /* IE 10+ */
+  user-select: none;          /* Likely future */ 
+}
+
+.col2 {
     columns: 2 200px;         /* number of columns and width in pixels*/
     -webkit-columns: 2 200px; /* chrome, safari */
     -moz-columns: 2 200px;    /* firefox */
-  }
-  .col3 {
+}
+
+.col3 {
     columns: 3 100px;
     -webkit-columns: 3 100px;
     -moz-columns: 3 100px;
-  }
-</style>
+}
+  
+```
 
 [cobriant.github.io](https://cobriant.github.io/)
 
