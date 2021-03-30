@@ -14,7 +14,7 @@
   
   # Run this code to get started:
 
-install.packages("tidyverse")
+install.packages("tidyverse", dependencies = T)
 library(tidyverse)
 US_data <- tibble(year      = c(1957, 1977, 1997, 2017),
                   gdpPercap = c(14847, 24073, 35767, 60062),
