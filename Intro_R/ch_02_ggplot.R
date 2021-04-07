@@ -15,16 +15,19 @@ library(tidyverse)
 #------------------------------------------------------------------------
 
 # 1. Make sure you've downloaded the data for the exercise.
-# Then read the data into R by entering the absolute file path of the data 
-# on your computer.
+# Then read the data into R by entering the absolute path of the data 
+# on your computer in the blank below:
 
-# If you're on a mac and you downloaded the file into your Downloads folder,
-# the absolute file path will look like this: "~/Downloads/ipums_tidy.csv"
-# If you're on windows, it will look like this: "C:\Downloads\ipums_tidy.csv"
+ipums <- read_csv("__")
+
+# You can find the absolute path by right-clicking on the file.
+# For me on a mac, assuming I downloaded the file into my Downloads folder,
+#   the absolute path is this: "~/Downloads/ipums_tidy.csv"
+# If you're on a windows computer, it may look something like this:
+#   "C:/Users/your_username_here/Downloads/ipums_tidy.csv"
 
 # I'll call the dataset "ipums" because that's the database the data
 # came from: https://en.wikipedia.org/wiki/IPUMS
-ipums <- read_csv("__")
 
 # 2. Take a look at your data:
 View(ipums)
