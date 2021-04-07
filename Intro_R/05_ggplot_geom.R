@@ -23,7 +23,7 @@ View(gapminder)
 
 # 1. Draw a histogram using `geom_histogram()`. It will use stacking 
 # with multiple groups. Change this stacking behavior with 
-# `position = "identity"`. Experiment with different binwidths.
+# `geom_histogram(position = "identity")`. Experiment with different binwidths.
 ggplot(data = gapminder, 
        aes(x = lifeExp, color = continent, fill = continent)) +
   __(binwidth = __)
@@ -41,7 +41,8 @@ ggplot(data = gapminder, aes(x = lifeExp, color = continent)) +
 ggplot(data = gapminder, aes(x = lifeExp, fill = continent)) +
   __(stat = "bin", binwidth = 5, alpha = .7)
 
-# 4. Draw a dotplot for `lifeExp` using `geom_dotplot()`.
+# 4. Draw a dotplot for `lifeExp` using `geom_dotplot()`. Experiment
+# with using `fill = continent` and leaving it out.
 ggplot(data = gapminder, aes(__)) +
   __
 
@@ -68,7 +69,6 @@ ggplot(data = gapminder, aes(x = lifeExp,
   __
 
 # 7. Take the plot above and annotate it by adding a label for 70 years.
-
 ggplot(data = gapminder, aes(x = lifeExp, 
                              color = continent, 
                              fill = continent)) +
@@ -79,7 +79,7 @@ ggplot(data = gapminder, aes(x = lifeExp,
 # Next we'll practice some `geom`s for plots with 2 variables.
 
 # 8. You've already seen a basic scatterplot. Try to recall how to
-# draw a `ggplot` that plots lifeExp on the x-axis and gdpPercap
+# draw a `ggplot` that plots gdpPercap on the x-axis and lifeExp
 # on the y-axis, and maps continent to color.
 
 __
@@ -89,11 +89,11 @@ __
 # (heteroskedasticity). Quick fix: apply a log transformation.
 # You can use `x = log(gdpPercap)` or add the layer `scale_x_log10()`.
 # I prefer the second, because it keeps the numbers on the x-axis
-# in normal units, not log units. I also like to use `labels = scales::comma`
-# which suppresses scientific notation.
+# in normal units, not log units. I also like to use 
+# `labels = scales::comma` which suppresses scientific notation.
 # The second issue: overplotting. We'd like to see how dense the
 # points are in the center. For that, you can use `geom_hex()`.
-# Experiment with `bins = __`.
+# Experiment with `geom_hex(bins = __)`.
 
 ggplot(data = gapminder, aes(x = gdpPercap, y = lifeExp)) +
   scale_x_log10(labels = scales::comma) +

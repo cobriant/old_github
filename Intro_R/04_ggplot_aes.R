@@ -45,7 +45,7 @@ ggplot(data = gapminder, aes(x = gdpPercap, y = lifeExp, __ = __)) +
 
 # 3. Some `geom`s also accept the `aes` `fill` as well as `color`.
 #    Enter `color` and then enter `fill` in the blank spot below and observe
-#    what happens. Try both at the same time. 
+#    what happens. Try both at the same time (`color = continent, fill = continent`).
 #    Note, I've specified `alpha = .5`, which reduces transparency to 50%.
 
 ggplot(data = gapminder, aes(x = lifeExp, __ = continent)) +
