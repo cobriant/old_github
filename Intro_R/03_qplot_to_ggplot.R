@@ -23,10 +23,18 @@ View(US_data)
 #-------------------------------------------------------------------------
 
 # First, we'll review `qplot()`:
-# Plot A: basic scatterplot
+# Plot A: a basic scatterplot with `qplot()`:
 qplot(data = US_data, x = gdpPercap, y = lifeExp)
 
-# Plot B: basic scatterplot with main title and axis labels
+# 1. Replicate plot A using `ggplot()`:
+ggplot(data = __, aes(x = __, y = __)) +
+  geom_point()
+# Notice `ggplot()` wraps x and y in `aes`. We'll talk more about
+# that in the next chapter.
+
+#-------------------------------------------------------------------------
+
+# Plot B: a basic scatterplot with a main title and axis labels in `qplot()`:
 qplot(data = US_data, 
       x = gdpPercap, 
       y = lifeExp, 
@@ -34,32 +42,23 @@ qplot(data = US_data,
       xlab = "GDP per capita",
       ylab = "Life expectancy")
 
-# Plot C: scatterplot with titles and 3 `geom`s
+# 2. Replicate plot B with `ggplot()`:
+ggplot(data = __, aes(x = __, y = __)) +
+  geom_point() +
+  labs(x = __, y = __, title = __)
+# Notice that with `ggplot()`, to add titles you add `+` a `lab()` label layer.
+
+#-------------------------------------------------------------------------
+
+# Plot C: scatterplot with multiple `geom`s in `qplot()`
 qplot(data = US_data, 
       x = gdpPercap, 
       y = lifeExp, 
-      main = "As GDP per capita increases, so does life expectancy",
-      xlab = "GDP per capita",
-      ylab = "Life expectancy",
       geom = c("point", "line", "smooth"))
 
-# Your task: replicate Plot A-C using `ggplot()`.
-# 1. Plot A: basic scatterplot
-ggplot(data = __, aes(x = __, y = __)) +
-  geom_point()
-
-# 2. Plot B: basic scatterplot with main title and axis labels
-ggplot(data = __, aes(x = __, y = __)) +
-  geom_point() +
-  labs(x = __, y = __, title = __)
-
-# 3. Plot C: scatterplot with titles and 3 `geom`s
+# 3. Replicate plot C with `ggplot()`:
 ggplot(data = __, aes(x = __, y = __)) +
   geom_point() +
   geom_line() +
-  geom_smooth() +
-  labs(x = __, y = __, title = __)
-
-# 2 important things to notice about `ggplot()`:
-#   1. `aes()`: we'll talk about what this means in the next chapter
-#   2. layers like `labs()` and `geom_point()` are added using `+`.
+  geom_smooth()
+# Notice that with `ggplot()`, to add multiple `geom`s, you add `+` layers.

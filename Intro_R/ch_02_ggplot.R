@@ -20,11 +20,11 @@ library(tidyverse)
 
 ipums <- read_csv("__")
 
-# You can find the absolute path by right-clicking on the file.
+# You can find the absolute path for your data by right-clicking on the file.
 # For me on a mac, assuming I downloaded the file into my Downloads folder,
 #   the absolute path is this: "~/Downloads/ipums_tidy.csv"
 # If you're on a windows computer, it may look something like this:
-#   "C:/Users/your_username_here/Downloads/ipums_tidy.csv"
+#   "C:/Users/your_username_here/Desktop/ipums_tidy.csv"
 
 # I'll call the dataset "ipums" because that's the database the data
 # came from: https://en.wikipedia.org/wiki/IPUMS
@@ -41,7 +41,15 @@ View(ipums)
 #  * Is the wage gap larger in urban areas versus rural?
 #  * Is the wage gap larger for non-citizens as opposed to citizens?
 #  * What about different combinations of any of the above factors?
-     
+
+# Hint: after you take a look at your data, take a pen and some paper
+# and draw out how it might make sense to visualize the answers to
+# these questions. Google different ways people have visualized wage gaps.
+# Only start coding after you have a good idea of how you want to represent 
+# the information.
+# Also, check out the ggplot cheat sheet here for an overview of all your options:
+# https://www.rstudio.com/wp-content/uploads/2015/03/ggplot2-cheatsheet.pdf
+
 # Requirements:
 #  * Use at least 4 different `geom`s across your 3 plots
 #  * For at least one plot, use `color` or `fill` as an aesthetic mapping
